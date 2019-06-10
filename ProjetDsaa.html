@@ -1,13 +1,14 @@
-<!doctype HTML>
-<html>
-<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
-  <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-  	<a-marker preset="hiro">
-            <a-box position='0 0.5 0' material='color: yellow;'></a-box>
-  	</a-marker>
-  	<a-entity camera></a-entity>
-    </a-scene>
-  </body>
-</html>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs>
+    <a-assets>
+      <a-asset-item id="sac.glb" src="https://cdn.rawgit.com/Ansou1998/Ansou1998.github.io/blob/master/Sac.gltf"></a-asset-item>
+		</a-assets>
+		<a-entity scale="2 2 2"  gltf-model="#sac.glb"></a-entity>
+    <a-marker-camera type='pattern' patternUrl='https://github.com/Ansou1998/Ansou1998.github.io/blob/master/pattern-marker-2.patt'></a-marker-camera>
+
+	
+	</a-scene>
+</body>
+

@@ -1,0 +1,16 @@
+<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
+<head>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam;'>
+    <a-assets>
+        <img id="transpImage" src="Berlin-07.jpg">
+    </a-assets>
+    <a-image id="test" src="Berlin-07.jpg" position="0 0 0" rotation="-90 0 0" width="" height="" opacity="1" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry="">
+        </a-image>
+    <a-marker-camera preset='custom' type='pattern' url='Berlin-Pattern.patt'></a-marker-camera>
+	</a-scene>
+</body>
